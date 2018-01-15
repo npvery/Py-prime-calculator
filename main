@@ -1,0 +1,12 @@
+number = int(input("Enter number you wish to check for primacy:"))
+
+prime = True
+for i in range(2, int(number**0.5)+1):
+    if number % i == 0:
+        i = str(i)
+        print("This number is not prime. It is divisible by %s." %(i))
+        prime = False
+    elif number % i != 0 and i < int(number**0.5):
+        pass
+    elif number % i != 0 and i >= int(number**0.5) and prime == True:
+        print ("This number is prime!")
